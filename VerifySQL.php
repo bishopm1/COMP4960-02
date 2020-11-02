@@ -12,18 +12,13 @@
        * @return boolean
        */
       public static function checkSQL($input){
-        if(strpos(strtoupper($input), 'DELETE') !== FALSE){
-          return FALSE;
+        $commands = array('DELETE','SELECT','FROM','UPDATE');
+        foreach($commands as &$value){
+          if(strpos(strtoupper($input), $value) !== FALSE){
+            return FALSE;
+          }
         }
-        elseif(strpos(strtoupper($input), 'SELECT') !== FALSE){
-          return FALSE;
-        }
-        elseif(strpos(strtoupper($input), 'FROM') !== FALSE){
-          return FALSE;
-        }
-        else{
-          return TRUE;
-        }
+        return TRUE;
       }
     }
 ?>
