@@ -13,7 +13,7 @@
     border-spacing: 0px;
 }
 
-#selected, #infoBody {
+#selected, #infoBody, #loginBody {
     background: #e6e6e6;
 }
 
@@ -24,8 +24,19 @@
     box-shadow: 5px 5px 10px #888888;
 }
 
-#infoBody td {
+#infoBody td, #loginBody td {
     width: 50%;
+}
+
+#loginBody {
+    width: 40%;
+    font-size: 24px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+#loginBody th {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 body {
