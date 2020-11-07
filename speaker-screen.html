@@ -22,14 +22,13 @@
                     </div>
                 </div>
             </li>
-            <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
 
 
     <body>
         <br /><br /><br /><br /><br /><br />
-        <form id="speakerInformation" method="POST">
+        <form id="speakerInformation" action = "RunSpeaker.php" method="POST">
             <table class="center">
                 <tr>
                     <th class="tabHeader"><a href="room-screen.html">Room</a></th>
@@ -39,15 +38,7 @@
                 </tr>
                 <tr>
                     <td colspan="4" style="width: 100%;">
-                        <table id="infoBody">
-                            <tr>
-                                <td colspan="4" style="width: 100%;">
-                                    <div style="float: right;">
-                                        <input type="button" Title="Exit" id="btnExit" name="exitSpeaker" value="x" style="border: none; background-color: transparent; color: black; margin: 0;" />
-                                    </div>
-                                    
-                                </td>
-                            </tr>
+                        <table id="speakerInfoBody">
                             <tr>
                                 <td colspan="4" style="text-align: center;">
                                     <label id="addOrEdit" style="font-weight: bold;"></label>
@@ -79,38 +70,42 @@
                             <tr>
                                 <td colspan="2" style="text-align: right;">Email: </td>
                                 <td>
-                                    <input type="email" name="speakerEmail" />
+                                    <input type="email" id="speakerEmail" name="speakerEmail" />
                                 </td>
                             </tr>
                             <tr><td> </td></tr>
                             <tr>
                                 <td colspan="2" style="text-align: right;">Phone Number #1: </td>
                                 <td>
-                                    <input type="tel" name="speakerPhoneNum1" />
+                                    <input type="tel" id="speakerPhoneNum1" name="speakerPhoneNum1" />
                                 </td>
                             </tr>
                             <tr><td> </td></tr>
                             <tr>
                                 <td colspan="2" style="text-align: right;">Day of Phone Number: </td>
                                 <td>
-                                    <input type="tel" name="speakerDayOfPhoneNum" />
+                                    <input type="tel" id="speakerDayOfPhoneNum" name="speakerDayOfPhoneNum" />
                                 </td>
                             </tr>
-                            <tr><td></td></tr>
+                            <tr><td><br/> </td></tr>
                             <tr id="addNewSpeaker">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnAdd" name="addSpeaker" value="Add" />
-                                    &emsp;&emsp;
+                                    &nbsp;
                                     <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
+                                    &nbsp;
+                                    <input type="button" id="btnExit" name="exitSpeaker" value="Exit" />
                                 </td>
                             </tr>
                             <tr id="editNewSpeaker" style="display: none;">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
-                                    &emsp;&emsp;
+                                    &nbsp;
                                     <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
-                                    &emsp;&emsp;
+                                    &nbsp;
                                     <input type="button" id="btnDelete" name="deleteSpeaker" value="Delete" />
+                                    &nbsp;
+                                    <input type="button" id="btnExit" name="exitSpeaker" value="Exit" />
                                 </td>
                             </tr>
                             <tr><td><br /> </td></tr>

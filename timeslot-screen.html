@@ -22,14 +22,13 @@
                     </div>
                 </div>
             </li>
-            <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
 
 
     <body>
         <br /><br /><br /><br /><br /><br />
-        <form id="timeSlotInformation" method="POST">
+        <form id="speakerInformation" action="RunTimeSlot.php" method="POST">
             <table class="center">
                 <tr>
                     <th class="tabHeader"><a href="room-screen.html">Room</a></th>
@@ -39,7 +38,7 @@
                 </tr>
                 <tr>
                     <td colspan="4" style="width: 100%;">
-                        <table id="infoBody">
+                        <table id="speakerInfoBody">
                             <tr>
                                 <td colspan="4" style="text-align: center;">
                                     <label id="addOrEdit" style="font-weight: bold;"></label>
@@ -69,7 +68,6 @@
                                 <td><input type="time" id="timeslotEndTime" name="timeslotEndTime"
                                 	min = "1:01" max = "18:00" required/></td>
                             </tr>
-                            <tr><td></td></tr>
                             <tr id="addNewTimeSlot">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnAdd" name="addTimeSlot" value="Add" />
