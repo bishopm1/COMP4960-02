@@ -1,5 +1,13 @@
 <?php 
   require('verification/VerifySpeaker.php');
+
+  /** 
+   * This script passes data gotten from the speaker
+   * form into the speaker verification class. If it 
+   * passes verification, the script will then send
+   * the speaker data to the database.
+   * @author Nick Foley
+   */
   
   //Pre-processing phone numbers 1 and 2
   $speakerPhone = str_replace('-',"",$_POST["speakerPhoneNum1"]);
