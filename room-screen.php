@@ -1,5 +1,5 @@
 <?php 
-include('PopulateRooms.php');
+include('automation/PopulateRooms.php');
 ?>
 <html>
     <head>
@@ -41,7 +41,7 @@ include('PopulateRooms.php');
                 </tr>
                 <tr>
                     <td colspan="4" style="width: 100%;">
-                        <table id="speakerInfoBody">
+                        <table id="infoBody">
                             <tr>
                                 <td colspan="4" style="text-align: center;">
                                     <label id="addOrEdit" style="font-weight: bold;"></label>
@@ -105,40 +105,8 @@ include('PopulateRooms.php');
         var roomName = document.getElementById("boxRoomName");
         
         function addOrEditFunc() {
-            if ((roomNameDd.value == 0) || (roomNameDd.value == -1) ) {
-                addOrEdit.textContent = "Enter";
-                editRoomBtns.style.display = "none";
-                addNewRoomBtns.style.display = "";
-                if (roomNameDd.value == 0) {
-                    roomNameDd.style.display = "none";
-                    roomName.style.display = ""
-                }
-            } else {
-                addOrEdit.textContent = "Edit";
-                editRoomBtns.style.display = "";
-                addNewRoomBtns.style.display = "none";
-                roomNameDd.style.display = "none";
-                boxRoomName.style.display = "";
-                boxRoomName.value = roomNameDd.value;
-                roomCapacity.value = String(<?php 
-                                        
-                                        PopulateRooms::populateCapacity("<script>roomNameeDD.value;</script>");
-                                        ?>);
-            }
+            <?php PopulateRooms::populateBoxes(); ?>
         };
-
-        function myAjax () {
-        $.ajax( { type : 'POST',
-          data : {'action':document.getElementById('my_h4').innerHTML },
-          url  : 'sendhelloo.php',
-          success: function ( data ) {
-            alert( data );
-          },
-          error: function ( xhr ) {
-            alert( "error" );
-          }
-        });
-}
 
         window.onload = addOrEditFunc();
     </script>

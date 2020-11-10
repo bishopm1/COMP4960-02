@@ -11,17 +11,24 @@
    if(VerifyRoom :: verifyRoomDriver($_POST['boxRoomName'],$_POST['roomCapacity']) === TRUE ){
     require_once "code_camp_dbconnect.php";
     
-    $sql = "INSERT INTO room(room_name, capacity)
-    VALUES('". $_POST['boxRoomName'] ."','". $_POST['roomCapacity'] ."')";
+    if($_POST["ddRoomName"] == '0'){
+      $sql = "INSERT INTO room(room_name, capacity)
+      VALUES('". $_POST['boxRoomName'] ."','". $_POST['roomCapacity'] ."')";
+  }
+  else{
+      $sql = "UPDATE room SET room_name = '".$_POST['boxRoomName']."', 
+      capacity = '".$_POST['roomCapacity']."' WHERE room_name = '".$_POST['boxRoomName']."'";
+  }
     
     $link->query($sql);
     mysqli_close($link);
     
-    echo "Data was sent!";
+    $location = "<script>location.href = ('room-screen.php'); alert('Work has been submitted!');</script>";
+    echo $location;
     
   }
   else{
-    echo "Data was not sent!";
-    exit(0);
+    $location = "<script>location.href = ('room-screen.php'); alert('Work wasn't submitted!');</script>";
+    echo $location;
   }
 ?>
