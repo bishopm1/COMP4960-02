@@ -58,7 +58,7 @@ class PopulateSpeaker {
 					txtLastName.value = '".$row[1]."';
                     txtEmail.value = '".$row[2]."';
 					txtPhone1.value = '".$row[3]."';
-					txtPhone2.value = '".$row[4]."';";
+					txtPhone2.value = '".$row[4]."';}";
         }
         mysqli_close($link);
         echo $fill;
