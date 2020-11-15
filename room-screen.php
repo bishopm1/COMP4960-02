@@ -7,7 +7,6 @@ include('automation/PopulateRooms.php');
         <title>Boston Code Camp Counter | Room</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </head>
 
     <nav id="navbar">
@@ -19,10 +18,10 @@ include('automation/PopulateRooms.php');
                 <div class="dropdown">
                     <button class="dropdownbtn">Add/Edit Information</button>
                     <div class="dropdown-content">
-                        <a href="room-screen.html">&nbsp;&nbsp;Room</a>
-                        <a href="speaker-screen.html">&nbsp;&nbsp;Speaker</a>
-                        <a href="timeslot-screen.html">&nbsp;&nbsp;Time Slot</a>
-                        <a href="session-screen.html">&nbsp;&nbsp;Session</a>
+                        <a href="room-screen.php">&nbsp;&nbsp;Room</a>
+                        <a href="speaker-screen.php">&nbsp;&nbsp;Speaker</a>
+                        <a href="timeslot-screen.php">&nbsp;&nbsp;Time Slot</a>
+                        <a href="session-screen.php">&nbsp;&nbsp;Session</a>
                     </div>
                 </div>
             </li>
@@ -34,10 +33,10 @@ include('automation/PopulateRooms.php');
         <form id="speakerInformation" action="RunRoom.php" method="POST">
             <table class="center">
                 <tr>
-                    <th class="tabHeader" id="selected" ><a href="room-screen.html">Room</a></th>
-                    <th class="tabHeader"><a href="speaker-screen.html">Speaker</a></th>
-                    <th class="tabHeader"><a href="timeslot-screen.html">Time Slot</a></th>
-                    <th class="tabHeader"><a href="session-screen.html">Session</a></th>
+                    <th class="tabHeader" id="selected" ><a href="room-screen.php">Room</a></th>
+                    <th class="tabHeader"><a href="speaker-screen.php">Speaker</a></th>
+                    <th class="tabHeader"><a href="timeslot-screen.php">Time Slot</a></th>
+                    <th class="tabHeader"><a href="session-screen.php">Session</a></th>
                 </tr>
                 <tr>
                     <td colspan="4" style="width: 100%;">
@@ -79,18 +78,13 @@ include('automation/PopulateRooms.php');
                                     <input type="button" id="btnExit" name="exitRoom" value="Exit" />
                                 </td>
                             </tr>
-
-
                             <tr id="editRoom" style="display: none;">
-
-
-
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveRoom" value="Save" />
                                     &nbsp;
                                     <input type="button" id="btnClear" name="clearRoom" value="Clear" />
                                     &nbsp;
-                                    <input type="button" id="btnDelete" name="deleteRoom" value="Delete"/>
+                                    <input type="button" id="btnDelete" name="deleteRoom" value="Delete" />
                                     &nbsp;
                                     <input type="button" id="btnExit" name="exitRoom" value="Exit" />
                                 </td>

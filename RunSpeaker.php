@@ -22,19 +22,31 @@
   $speakerPhone, $speakerPhone2) === TRUE){
     require_once "code_camp_dbconnect.php";
     
-    $sql = "INSERT INTO speaker(first_name, last_name, email_address, phonenum1, phonenum2)
-    VALUES('". $_POST["speakerFirstName"] ."','".$_POST["speakerLastName"] ."',
-    '".$_POST["speakerEmail"] ."','". $speakerPhone ."',
-    '". $speakerPhone2 ."')";
-    
-    $link->query($sql);
-    mysqli_close($link);
-    
-    echo "Data was sent!";
-    
+    if($_POST["ddSpeakerName"] == '0'){
+      $sql = "INSERT INTO speaker(first_name, last_name, email_address, phonenum1, phonenum2)
+      VALUES('". $_POST["speakerFirstName"] ."','".$_POST["speakerLastName"] ."',
+      '".$_POST["speakerEmail"] ."','". $speakerPhone ."',
+      '". $speakerPhone2 ."')";
   }
   else{
-    echo "Data was not sent!";
-    exit(0);
+      $sql = "UPDATE speaker SET first_name = '".$_POST["speakerFirstName"]."', 
+      last_name = '".$_POST["speakerLastName"]."', email_address = '".$_POST["speakerEmail"]."',
+      phonenum1 = '".$speakerPhone."', phonenum2 = '".$speakerPhone2."'
+      WHERE speakerID = '".$_POST['ddSpeakerName']."';";
+      echo $_POST['ddSpeakerName'];
   }
+  
+  
+  
+  $link->query($sql);
+  mysqli_close($link);
+  
+  $location = "<script>location.href = ('speaker-screen.php'); alert('Data has been submitted');</script>";
+  echo $location;
+  
+}
+else{
+  $location = "<script>location.href = ('speaker-screen.php'); alert('Data was not submitted');</script>";
+  echo $location;
+}
 ?>
