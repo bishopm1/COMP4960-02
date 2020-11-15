@@ -79,13 +79,18 @@ include('automation/PopulateRooms.php');
                                     <input type="button" id="btnExit" name="exitRoom" value="Exit" />
                                 </td>
                             </tr>
+
+
                             <tr id="editRoom" style="display: none;">
+
+
+
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveRoom" value="Save" />
                                     &nbsp;
                                     <input type="button" id="btnClear" name="clearRoom" value="Clear" />
                                     &nbsp;
-                                    <input type="button" id="btnDelete" name="deleteRoom" value="Delete" />
+                                    <input type="button" id="btnDelete" name="deleteRoom" value="Delete"/>
                                     &nbsp;
                                     <input type="button" id="btnExit" name="exitRoom" value="Exit" />
                                 </td>
