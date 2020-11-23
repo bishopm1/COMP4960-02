@@ -77,26 +77,23 @@ include('automation/PopulateTimeslot.php');
                             <tr id="addNewTimeSlot">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnAdd" name="addSpeaker" value="Add" />
+                                    &emsp;&emsp;
+                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" />
                                 </td>
                             </tr>
                             <tr id="editNewTimeSlot" style="display: none;">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" style="text-align: center;">
-                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" style="margin-bottom: 10px;" />
-
+                                    &emsp;&emsp;
+                                    <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="4">
                                     <input type="submit" id="action" name="action" value="Delete" style="float: left; margin-left: 10px; margin-bottom: 10px;" />
-                                    <input type="button" Title="Exit" id="btnExit" name="exitSpeaker" value="Exit" style="float: right; margin-right: 10px; margin-bottom: 10px;" />
+                                    <input type="button" Title="Exit" id="btnExit" name="exitSpeaker" onclick= "location.href = ('room-screen.php');" value="Exit" style="float: right; margin-right: 10px; margin-bottom: 10px;" />
                                 </td>
                             </tr>
-                            <tr><td><br /> </td></tr>
                         </table>
                     </td>
                 </tr>
