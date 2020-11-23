@@ -50,7 +50,7 @@ class PopulateTimeslot {
             }";
             
         while ($row = mysqli_fetch_row($result)) {
-                $fill = $fill . "else if(timeslotDd.value == '".$row[0]."'){
+                $fill = $fill . "else if(timeslotDd.value == '".$row[2]."'){
                 addOrEdit.textContent = 'Edit';
                 editNewTimeSlotBtns.style.display = '';
                 addNewTimeSlotBtns.style.display = 'none';

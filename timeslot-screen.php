@@ -54,7 +54,7 @@ include('automation/PopulateTimeslot.php');
                             <tr id="timeSlot" >
                                 <td colspan="2" style="text-align: right;">Time Slot: </td>
                                 <td colspan="2">
-                                    <select name="ddtTimeSlot" id="ddTimeSlot" onchange='addOrEditFunc();'>
+                                    <select name="ddTimeSlot" id="ddTimeSlot" onchange='addOrEditFunc();'>
                                         <option value="-1" selected="true"></option>
                                         <option value="0">&lt;Add New Time Slot&gt;</option>
                                         <?php 
@@ -76,22 +76,24 @@ include('automation/PopulateTimeslot.php');
                             </tr>
                             <tr id="addNewTimeSlot">
                                 <td colspan="4" style="text-align: center;">
-                                    <input type="submit" id="btnAdd" name="addTimeSlot" value="Add" />
-                                    &nbsp;
-                                    <input type="button" id="btnClear" name="clearTimeSlot" value="Clear" />
-                                    &nbsp;
-                                    <input type="button" id="btnExit" name="exitTimeSlot" value="Exit" />
+                                    <input type="submit" id="btnAdd" name="addSpeaker" value="Add" />
                                 </td>
                             </tr>
                             <tr id="editNewTimeSlot" style="display: none;">
                                 <td colspan="4" style="text-align: center;">
-                                    <input type="submit" id="btnSave" name="saveTimeSlot" value="Save" />
-                                    &nbsp;
-                                    <input type="button" id="btnClear" name="clearTimeSlot" value="Clear" />
-                                    &nbsp;
-                                    <input type="button" id="btnDelete" name="deleteTimeSlot" value="Delete" />
-                                    &nbsp;
-                                    <input type="button" id="btnExit" name="exitTimeSlot" value="Exit" />
+                                    <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="text-align: center;">
+                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" style="margin-bottom: 10px;" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <input type="submit" id="action" name="action" value="Delete" style="float: left; margin-left: 10px; margin-bottom: 10px;" />
+                                    <input type="button" Title="Exit" id="btnExit" name="exitSpeaker" value="Exit" style="float: right; margin-right: 10px; margin-bottom: 10px;" />
                                 </td>
                             </tr>
                             <tr><td><br /> </td></tr>

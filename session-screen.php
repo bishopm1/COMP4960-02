@@ -110,21 +110,23 @@ include('automation/PopulateTimeslot.php');
                             <tr id="addNewSession">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnAdd" name="addSpeaker" value="Add" />
-                                    &nbsp;
-                                    <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
-                                    &nbsp;
-                                    <input type="button" id="btnExit" name="exitSpeaker" value="Exit" />
                                 </td>
                             </tr>
                             <tr id="editSession" style="display: none;">
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
-                                    &nbsp;
-                                    <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
-                                    &nbsp;
-                                    <input type="button" id="btnDelete" name="deleteSpeaker" value="Delete" />
-                                    &nbsp;
-                                    <input type="button" id="btnExit" name="exitSpeaker" value="Exit" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="text-align: center;">
+                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" style="margin-bottom: 10px;" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <input type="submit" id="action" name="action" value="Delete" style="float: left; margin-left: 10px; margin-bottom: 10px;" />
+                                    <input type="button" Title="Exit" id="btnExit" name="exitSpeaker" value="Exit" style="float: right; margin-right: 10px; margin-bottom: 10px;" />
                                 </td>
                             </tr>
                             <tr><td><br /> </td></tr>

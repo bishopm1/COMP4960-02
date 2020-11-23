@@ -71,22 +71,24 @@ include('automation/PopulateRooms.php');
                             <tr><td><br/> </td></tr>
                             <tr id="addNewRoom">
                                 <td colspan="4" style="text-align: center;">
-                                    <input type="submit" id="btnAdd" name="addRoom" value="Add" />
-                                    &nbsp;
-                                    <input type="button" id="btnClear" name="clearRoom" value="Clear" />
-                                    &nbsp;
-                                    <input type="button" id="btnExit" name="exitRoom" value="Exit" />
+                                    <input type="submit" id="btnAdd" name="addSpeaker" value="Add" />
                                 </td>
                             </tr>
                             <tr id="editRoom" style="display: none;">
                                 <td colspan="4" style="text-align: center;">
-                                    <input type="submit" id="btnSave" name="saveRoom" value="Save" />
-                                    &nbsp;
-                                    <input type="button" id="btnClear" name="clearRoom" value="Clear" />
-                                    &nbsp;
-                                    <input type="button" id="btnDelete" name="deleteRoom" value="Delete" />
-                                    &nbsp;
-                                    <input type="button" id="btnExit" name="exitRoom" value="Exit" />
+                                    <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="text-align: center;">
+                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" style="margin-bottom: 10px;" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <input type="submit" id="action" name="action" value="Delete" style="float: left; margin-left: 10px; margin-bottom: 10px;" />
+                                    <input type="button" Title="Exit" id="btnExit" name="exitSpeaker" value="Exit" style="float: right; margin-right: 10px; margin-bottom: 10px;" />
                                 </td>
                             </tr>
                             <tr><td><br /> </td></tr>
