@@ -131,13 +131,6 @@ input[type=button], input[type=submit] {
     font-size: 24px;
 }
 
-
-input[type=reset], input[type=submit] {
-    color: #ffffff;
-    background-color: #a6a6a6;
-    font-size: 24px;
-}
-
 input[type=button]:hover, input[type=submit]:hover {
     background-color: #666666;
 }
@@ -151,4 +144,8 @@ label{
 
 input, label{
     margin: .4rem 0;
+}
+
+input[type=number], input[type=text], select {
+    font-size: 20px;
 }
