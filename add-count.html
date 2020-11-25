@@ -21,16 +21,16 @@
                     <td colspan="4"><label style="font-weight: bold; font-size: 30px;">Search by:</label></td>
                 </tr>
                 <tr>
-                    <th class="tabHeader" id="searchBySession"><a style="width: 100%;" onclick="selectTab('searchBySession');">Session</a></th>
-                    <th class="tabHeader" id="searchByRoomAndTime"><a style="width: 100;" onclick="selectTab('searchByRoomAndTime');">Room & Time Slot</a></th>
+                    <th class="tabHeader" id="searchBySession"><a onclick="selectTab('searchBySession');">Session</a></th>
+                    <th class="tabHeader" id="searchByRoomAndTime"><a onclick="selectTab('searchByRoomAndTime');">Room & Time Slot</a></th>
                     <td><a onclick="selectTab();"></a></th>
                 </tr>
                 <tr>
                     <td colspan="4" style="width: 100%;">
                         <table id="infoBody">
-                            <tr><td></td></tr>
+                            <tr><td colspan="4"><br/> </td></tr>
                             <tr>
-                                <td colspan="2" style="text-align: right;"><u>Session Name: </u></td>
+                                <td colspan="2" style="text-align: right; width: 50%;"><u>Session Name: </u></td>
                                 <td colspan="2">
                                     <select name="sessionName" id="ddSessionName" onchange="ddSelected('session');">
                                         <option value="-1" selected="true"></option>
@@ -40,7 +40,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" style="text-align: right;"><u>Room Name: </u></td>
+                                <td colspan="2" style="text-align: right; width: 50%;"><u>Room Name: </u></td>
                                 <td colspan="2">
                                     <select name="roomName" id="ddRoomName" onchange=''>
                                         <option value="-1" selected="true"></option>
@@ -50,7 +50,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" style="text-align: right;"><u>Time Slot: </u></td>
+                                <td colspan="2" style="text-align: right; width: 50%;"><u>Time Slot: </u></td>
                                 <td colspan="2">
                                     <select name="timeSlot" id="ddTimeSlot" onchange="ddSelected('roomAndTime');">
                                         <option value="-1" selected="true"></option>
@@ -88,7 +88,7 @@
                                     <input type="button" id="btnCancel" name="clearSpeaker" value="Cancel" />
                                 </td>
                             </tr>
-                        <tr><td> </td></tr>
+                        <tr><td><br/> </td></tr>
                         </table>
                     </td>
                 </tr>
@@ -122,13 +122,13 @@
 
                 ddSession.style.display = "none";
                 ddSession.selectedIndex = 0;
-                labelSession.style.display = '';
+                labelSession.style.display = 'block';
                 labelSession.innerText = '';
-                ddRoom.style.display = '';
+                ddRoom.style.display = 'block';
                 ddRoom.selectedIndex = 0;
                 labelRoom.style.display = "none";
                 labelRoom.innerText = '';
-                ddTime.style.display = '';
+                ddTime.style.display = 'block';
                 ddTime.selectedIndex = 0;
                 labelTime.style.display = "none";
                 labelTime.innerText = '';
@@ -140,17 +140,17 @@
                 selectedTab.style.background = '#e6e6e6';
                 notSelected.style.background = '#bfbfbf';
                 
-                ddSession.style.display = '';
+                ddSession.style.display = 'block';
                 ddSession.selectedIndex = 0;
                 labelSession.style.display = "none";
                 labelSession.innerText = '';
                 ddRoom.style.display = "none";
                 ddRoom.selectedIndex = 0;
-                labelRoom.style.display = '';
+                labelRoom.style.display = 'block';
                 labelRoom.innerText = '';
                 ddTime.style.display = "none";
                 ddTime.selectedIndex = 0;
-                labelTime.style.display = '';
+                labelTime.style.display = 'block';
                 labelTime.innerText = '';
             }
         }
@@ -179,12 +179,12 @@
             var i = 0;
             if (yesOrNo) {
                 for(;countBoxes[i];) {
-                    countBoxes[i].style.display = '';
+                    countBoxes[i].style.visibility = "visible";
                     i++;
                 }
             } else {
                 for(;countBoxes[i];) {
-                    countBoxes[i].style.display = "none";
+                    countBoxes[i].style.visibility = "collapse";
                     i++;
                 }
             }
