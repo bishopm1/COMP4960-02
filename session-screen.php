@@ -18,8 +18,8 @@ include('automation/PopulateTimeslot.php');
     <nav id="navbar">
         <ul style="width:100%">
             <li style="float: left;" id="programName">Boston Code Camp</li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Add Counts</a></li>
+            <li><a href="room-screen.php">Home</a></li>
+            <li><a href="add-count.html">Add Counts</a></li>
             <li>
                 <div class="dropdown">
                     <button class="dropdownbtn">Add/Edit Information</button>
@@ -74,7 +74,7 @@ include('automation/PopulateTimeslot.php');
                                 <td colspan="2">
                                     <select name="ddSpeakerName" id="ddSpeakerName" onchange='addFunc();'>
                                         <option value="-1" selected="true"></option>
-                                        <option value="0">&lt;Add New Speaker&gt;</option>
+                                        <option value="0">&lt;Create New Speaker&gt;</option>
 										<?php 
                                         PopulateSpeaker::populateName();
                                         ?>
@@ -86,7 +86,7 @@ include('automation/PopulateTimeslot.php');
                                 <td colspan="2">
                                     <select name="ddTimeSlot" id="ddTimeSlot" onchange='addFunc();'>
                                         <option value="-1" selected="true"></option>
-                                        <option value="0">&lt;Add New Time Slot&gt;</option>
+                                        <option value="0">&lt;Create New Time Slot&gt;</option>
 										<?php 
                                         PopulateTimeslot::populateTimes();
                                         ?>
@@ -98,7 +98,7 @@ include('automation/PopulateTimeslot.php');
                                 <td colspan="2">
                                     <select name="ddRoomName" id="ddRoomName" onchange='addFunc();'>
                                         <option value="-1" selected="true"></option>
-                                        <option value="0">&lt;Add New Room Name&gt;</option>
+                                        <option value="0">&lt;Create New Room&gt;</option>
 										<?php 
                                         PopulateRooms::populateName();
                                         ?>
@@ -117,7 +117,7 @@ include('automation/PopulateTimeslot.php');
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
                                     &emsp;&emsp;
-                                    <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
+                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" />
                                 </td>
                             </tr>
                             <tr>
@@ -146,6 +146,18 @@ include('automation/PopulateTimeslot.php');
         function addOrEditFunc() {
             <?php PopulateSession::populateBoxes(); ?>
         };
+        
+        function addFunc() {
+        if (speakerNameDd.value == 0) {
+            window.location.replace("speaker-screen.php");
+        }
+        if (roomNameDd.value == 0) {
+            window.location.replace("room-screen.php");
+        }
+        if (timeSlotDd.value == 0) {
+            window.location.replace("timeslot-screen.php");
+        }
+    };
 
         window.onload = addOrEditFunc();
     </script>

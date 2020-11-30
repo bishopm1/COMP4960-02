@@ -12,8 +12,8 @@ include('automation/PopulateTimeslot.php');
     <nav id="navbar">
         <ul style="width:100%">
             <li style="float: left;" id="programName">Boston Code Camp</li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Add Counts</a></li>
+            <li><a href="room-screen.php">Home</a></li>
+            <li><a href="add-count.html">Add Counts</a></li>
             <li>
                 <div class="dropdown">
                     <button class="dropdownbtn">Add/Edit Information</button>
@@ -85,7 +85,7 @@ include('automation/PopulateTimeslot.php');
                                 <td colspan="4" style="text-align: center;">
                                     <input type="submit" id="btnSave" name="saveSpeaker" value="Save" />
                                     &emsp;&emsp;
-                                    <input type="button" id="btnClear" name="clearSpeaker" value="Clear" />
+                                    <input type="reset" id="btnClear" name="clearSpeaker" value="Clear" />
                                 </td>
                             </tr>
                             <tr>

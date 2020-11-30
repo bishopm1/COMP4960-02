@@ -1,29 +1,19 @@
 <?php 
-
-/** 
-   * This script passes data gotten from the timeslot
-   * form into the timeslit verification class. If it 
-   * passes verification, the script will then send
-   * the session data to the database.
-   * @author Nick Foley
-   */
-
   require('verification/VerifyTimeSlot.php');
-
   if($_POST["action"] == 'Delete'){
         require_once "code_camp_dbconnect.php";
         $sql = "DELETE FROM timeslot WHERE timeslot_ID = '".$_POST['ddTimeSlot']."'";
         $link->query($sql);
         mysqli_close($link);
     
-        $location = "<script>location.href = ('timeslot-screen.php'); alert('".$_POST['timeslotStartTime']." - ".$_POST['timeslotEndTime']."has been deleted');</script>";
+        $location = "<script>location.href = ('timeslot-screen.php'); alert('". date("g:i a", strtotime($_POST['timeslotStartTime'])) . " - ". date("g:i a", strtotime($_POST['timeslotEndTime'])) ." has been deleted');</script>";
         echo $location;
   }
   else{
     if(VerifyTimeSlot::verifyTimeDriver($_POST['timeslotStartTime'], $_POST['timeslotEndTime']) === TRUE){
         require_once "code_camp_dbconnect.php";
     
-        if($_POST["timeslotDd"] == '0'){
+        if($_POST["ddTimeSlot"] == '0'){
             $sql = "INSERT INTO timeslot(start_time, end_time)
             VALUES('". $_POST['timeslotStartTime'] ."','".$_POST['timeslotEndTime'] ."')";
         }
@@ -35,7 +25,7 @@
         $link->query($sql);
         mysqli_close($link);
     
-        $location = "<script>location.href = ('timeslot-screen.php'); alert('Data has been submitted');</script>";
+        $location = "<script>location.href = ('timeslot-screen.php'); alert('". date("g:i a", strtotime($_POST['timeslotStartTime'])) . " - ". date("g:i a", strtotime($_POST['timeslotEndTime'])) ." has been submitted');</script>";
         echo $location;
     
     }

@@ -1,13 +1,4 @@
 <?php 
-
-/** 
-   * This script passes data gotten from the speaker
-   * form into the speaker verification class. If it 
-   * passes verification, the script will then send
-   * the session data to the database.
-   * @author Nick Foley
-   */
-
   require('verification/VerifySpeaker.php');
   
   //Pre-processing phone numbers 1 and 2
@@ -54,7 +45,7 @@
     $link->query($sql);
     mysqli_close($link);
     
-    $location = "<script>location.href = ('speaker-screen.php'); alert('Data has been submitted');</script>";
+    $location = "<script>location.href = ('speaker-screen.php'); alert('".$_POST["speakerFirstName"]." ".$_POST["speakerLastName"]." has been submitted');</script>";
     echo $location;
     
   }

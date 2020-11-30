@@ -1,13 +1,4 @@
 <?php 
-
-/** 
-   * This script passes data gotten from the room
-   * form into the room verification class. If it 
-   * passes verification, the script will then send
-   * the session data to the database.
-   * @author Nick Foley
-   */
-  
   require('verification/VerifyRoom.php');
   
   if($_POST["action"] == 'Delete'){
@@ -36,7 +27,7 @@
     $link->query($sql);
     mysqli_close($link);
     
-    $location = "<script>location.href = ('room-screen.php'); alert('Data has been submitted');</script>";
+    $location = "<script>location.href = ('room-screen.php'); alert('".$_POST['boxRoomName']." has been submitted');</script>";
     echo $location;
     
     }

@@ -19,7 +19,7 @@ class PopulateTimeslot {
         $options = "";
     
         while ($row = mysqli_fetch_row($result)) {
-            $options = $options . "<option value='".$row[2]."'>" .$row[0] ." - ".$row[1]."</option>";
+            $options = $options . "<option value='".$row[2]."'>" .date("g:i a", strtotime($row[0])) ." - ".date("g:i a", strtotime($row[1]))."</option>";
         }
 
         echo $options;

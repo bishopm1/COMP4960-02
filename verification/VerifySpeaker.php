@@ -32,7 +32,6 @@ Class VerifySpeaker extends VerifySQL{
     }
     elseif(strcmp($speakerPhoneTwo,"") !== 0){
       if(self::validateSpeakerPhoneNumber($speakerPhoneTwo) == FALSE){
-        echo "here";
         return FALSE;
       }
       else{

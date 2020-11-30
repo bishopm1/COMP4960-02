@@ -36,7 +36,7 @@
         $link->query($sql);
         mysqli_close($link);
     
-        $location = "<script>location.href = ('session-screen.php'); alert('Data has been submitted');</script>";
+        $location = "<script>location.href = ('session-screen.php'); alert('".$_POST["boxSessionName"]." has been submitted');</script>";
         echo $location;
     
     }
